@@ -40,3 +40,7 @@ Introduction to Ollama. What it does and how it solves the problem that LLMs are
 
 Installing Ollama on a Kubernetes cluster. Loading the LLama2 and LLaVa models and showing a small application
 on how to use LLMs as a developer.
+
+## Links
+
+- <https://github.com/ollama/ollama/blob/main/docs/api.md>
