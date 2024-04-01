@@ -53,11 +53,92 @@
                 </div>
             </section>
 
-             <!-- CHATGPT -->
-             <section class="bg-black">
+            <!-- CHATGPT -->
+            <section class="bg-black">
                 <span class="background dark"></span>
                 <div class="wrap aligncenter">
-                   <img src="public/assets/img/chatgpt.png" alt="ChatGPT" width="30%">
+                    <img src="public/assets/img/chatgpt.png" alt="ChatGPT" width="30%">
+            </section>
+
+            <!-- INTRODUCTION TO LLAMA2 -->
+            <section class="bg-black">
+                <span class="background dark" style="background-image:url('public/assets/img/llamas.jpg')"></span>
+                <div class="wrap">
+                    <h1><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M640 317.9C640 409.2 600.6 466.4 529.7 466.4C467.1 466.4 433.9 431.8 372.8 329.8L341.4 277.2C333.1 264.7 326.9 253 320.2 242.2C300.1 276 273.1 325.2 273.1 325.2C206.1 441.8 168.5 466.4 116.2 466.4C43.4 466.4 0 409.1 0 320.5C0 177.5 79.8 42.4 183.9 42.4C234.1 42.4 277.7 67.1 328.7 131.9C365.8 81.8 406.8 42.4 459.3 42.4C558.4 42.4 640 168.1 640 317.9H640zM287.4 192.2C244.5 130.1 216.5 111.7 183 111.7C121.1 111.7 69.2 217.8 69.2 321.7C69.2 370.2 87.7 397.4 118.8 397.4C149 397.4 167.8 378.4 222 293.6C222 293.6 246.7 254.5 287.4 192.2V192.2zM531.2 397.4C563.4 397.4 578.1 369.9 578.1 322.5C578.1 198.3 523.8 97.1 454.9 97.1C421.7 97.1 393.8 123 360 175.1C369.4 188.9 379.1 204.1 389.3 220.5L426.8 282.9C485.5 377 500.3 397.4 531.2 397.4L531.2 397.4z" />
+                        </svg> Llama2</h1>
+                </div>
+            </section>
+
+            <!-- WHAT IS LLAMA2 -->
+            <section>
+                <div class="wrap">
+                    <div class="card-50">
+                        <figure><img class="aligncenter" src="public/assets/img/meta-ai.png" alt="Meta AI"></figure>
+                        <div class="flex-content">
+                            <h2>What is Llama2</h2>
+                            <i class="text-intro">Open Foundation and Fine-Tuned Chat Models</i>
+                            <ul class="bigger-list">
+                                <li>Trained on 2 trillion tokens</li>
+                                <li>Fine-tuned on 1 million human annotations</li>
+                                <li>Made for chat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOW TO USE LLAMA2 -->
+            <section>
+                <div class="wrap">
+                    <h2>How to use Llama2</h2>
+                    <pre class="language-shell"><code style="font-size: 2em;"># 1. In a conda env with PyTorch / CUDA available clone and download this repository. 
+git clone git@github.com:meta-llama/llama.git
+
+# 2. In the top-level directory run:
+pip install -e .</code></pre>
+                </div>
+            </section>
+
+            <!-- STEP 3 AND 4 -->
+            <section class="bg-black">
+                <span class="background dark" style="background-image:url('public/assets/img/angry-cat.jpg')"></span>
+                <div class="wrap">
+                    <h2>3. Visit the Meta website and register to download the model/s.</h2>
+                </div>
+            </section>
+
+            <section class="slide fullscreen bg-black">
+                <div class="wrap">
+                    <img class="aligncenter" src="public/assets/img/download-llama-models.png" />
+                </div>
+            </section>
+
+            <section class="slide fullscreen bg-black">
+                <div class="wrap">
+                    <img class="aligncenter" src="public/assets/img/download-more-models.png" />
+                </div>
+            </section>
+
+            <section class="bg-black">
+                <span class="background dark" style="background-image:url('public/assets/img/confused-cat.jpeg')"></span>
+                <div class="wrap">
+                    <h3>4. Once registered, you will get an email with a URL to download the models.</h3>
+                    <h3>5. Once you get the email, navigate to your downloaded llama repository and run the download.sh
+                        script.</h3>
+                </div>
+            </section>
+
+            <!-- FINALLY RUNNING THE MODEL -->
+            <section>
+                <div class="wrap">
+                    <pre class="language-python"><code style="font-size: 2em;">torchrun --nproc_per_node 1 example_chat_completion.py \
+--ckpt_dir llama-2-7b-chat/ \
+--tokenizer_path tokenizer.model \
+--max_seq_len 512 --max_batch_size 6</code></pre>
+                </div>
             </section>
 
         </article>
