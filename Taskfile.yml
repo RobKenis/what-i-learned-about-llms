@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  enable-ipv6:
+    cmds:
+      - sudo modprobe -v ip6_tables
+  create-cluster:
+    deps:
+      - enable-ipv6
+    cmds:
+      - kind create cluster --name llm --config cluster.yaml
