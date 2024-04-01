@@ -1,5 +1,8 @@
 version: '3'
 
+env:
+  CONTAINER_RUNTIME: podman
+
 tasks:
   enable-ipv6:
     cmds:
@@ -9,3 +12,9 @@ tasks:
       - enable-ipv6
     cmds:
       - kind create cluster --name llm --config cluster.yaml
+  slides:
+    cmds:
+      - $CONTAINER_RUNTIME run --name llm-slides -v $(pwd):/usr/share/nginx/html:ro -d -p 8080:80 nginx
+  docker-clean:
+    cmds:
+      - $CONTAINER_RUNTIME rm -f llm-slides
