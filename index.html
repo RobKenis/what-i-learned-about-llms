@@ -184,6 +184,22 @@ docker run my-application:1.0.0</code></pre>
                 </div>
             </section>
 
+            <!-- RUNNING THE NEW -->
+            <section>
+                <div class="wrap">
+                    <pre class="language-shell"><code style="font-size: 2em;"># 1. Pull the model
+curl http://localhost:11434/api/pull -d '{
+    "name": "llama2"
+}'
+
+# 2. Run the model
+curl -X POST http://localhost:11434/api/generate -d '{
+    "model": "llama2",
+    "prompt":"Why is the sky blue?"
+}'</code></pre>
+                </div>
+            </section>
+
         </article>
     </main>
 
